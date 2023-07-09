@@ -1,0 +1,353 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ******************************************************* */
+#wrapper{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    font-family: Poppins, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    /* border: 2px solid red; */
+}
+/* ******************************************************* */
+.container{
+    height: 90vh;
+    width: fit-content;
+    max-width: 1080px;
+
+    display: flex;
+    /* border: 2px solid blueviolet; */
+}
+/* ******************************************************* */
+.left-div{
+    max-width: 45%;
+    width: 500px
+
+    /* border: 2px solid blue; */
+}
+.right-div{
+    width: 580px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1rem;
+    padding: 0 2rem;
+
+    /* border: 2px solid green; */
+}
+/* ******************************************************* */
+.desc-details{
+    display: flex;
+    flex-wrap: wrap;
+
+    /* border: 2px solid saddlebrown; */
+}
+.details{
+    padding: 0.5rem 0.5rem;
+    cursor: pointer;
+    font-weight: 600;
+
+    /* border: 2px solid purple; */
+}
+.description{
+    margin-left: -2rem;
+    margin-right: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.5rem 0.5rem;
+    /* border: 2px solid black; */
+}
+
+/* ******************************************************* */
+
+.details-text{
+    display: flex;
+    width: 50%;
+    min-width: 450px;
+    
+}
+.desc-details p{
+    min-width: 450px;
+}
+/* ******************************************************* */
+.all-color{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* border: 2px solid aqua; */
+}
+
+/* ****************************COLOR BUTTON STYLING*************************** */
+
+.all-color{
+    /* position: relative; */
+    gap: 0.5rem;
+}
+.all-color .color input[type="radio"]{
+    position: absolute;
+    visibility: hidden;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+}
+.all-color .color label{
+    display: inline-block;
+    border-radius: 10px;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    /* border: 2px solid blue; */
+}
+.all-color .color1 label{
+    background-image: url(/color1.jpg);
+}
+.all-color .color2 label{
+    background-image: url(/color2.jpg);
+}
+.all-color .color3 label{
+    background-image: url(/color3.jpg);
+}
+.all-color .color4 label{
+    background-image: url(/color4.jpg);
+}
+.all-color .color5 label{
+    background-image: url(/color5.jpg);
+}
+.all-color .color6 label{
+    background-image: url(/color6.jpg);
+}
+
+/* ***********************BUTTON STYLING********************** */
+.btn{
+    position: absolute;
+    bottom: 10%;
+    right: 37.3%;
+}
+.btn input[type="button"]{
+    color: white;;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-style: none;
+    padding: 0.8rem 3rem;
+    border-radius: 5px;
+    background-color: rgb(26, 26, 26);
+    cursor: pointer;
+}
+/* *********************CHAIR IMAGE STYLING******************** */
+.left-div{
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem; 
+}
+.common-chair{
+    position: absolute;
+    opacity: 0;
+    top: 18%;
+    left: 12%;
+    width: 35%;
+    max-width: 200%;
+
+    /* border: 2px darkorange solid; */
+}
+/* **********************BACKGROUND STYLING*********************** */
+.color label::after{
+    content: "";
+    width: 100;
+    height: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+/* **********************CHECKBOX ACTION************************ */
+.color > label {
+    cursor: pointer;
+}
+.color1 input[type="radio"]:checked ~ .image1{
+    opacity: 1;
+    animation: shake-effect 220ms 100ms ease 2 alternate;
+}
+.color1 input[type="radio"]:checked ~ label{
+    border: 2px solid rgb(38, 38, 38);
+}
+.color1 input[type="radio"]:checked ~ label::after{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(196deg, rgb(241, 169, 169), rgb(230, 103, 103));
+    z-index: -1;
+    transition: ease;
+    opacity: 1;
+}
+.color2 input[type="radio"]:checked ~ .image2{
+    opacity: 1;
+    animation: shake-effect 250ms 100ms ease 2 alternate;
+}
+.color2 input[type="radio"]:checked ~ label{
+    border: 2px solid rgb(38, 38, 38);
+}
+.color2 input[type="radio"]:checked ~ label::after{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(196deg, rgb(76, 76, 76), rgb(38, 38, 38));
+    z-index: -1;
+    transition: ease;
+    opacity: 1;
+}
+.color3 input[type="radio"]:checked ~ .image3{
+    opacity: 1;
+    animation: shake-effect 250ms 100ms ease 2 alternate;
+}
+.color3 input[type="radio"]:checked ~ label{
+    border: 2px solid rgb(38, 38, 38);
+}
+.color3 input[type="radio"]:checked ~ label::after{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(196deg, rgb(138, 159, 178), rgb(95, 121, 145));
+    z-index: -1;
+    transition: ease;
+    opacity: 1;
+}
+.color4 input[type="radio"]:checked ~ .image4{
+    opacity: 1;
+    animation: shake-effect 250ms 100ms ease 2 alternate;
+}
+.color4 input[type="radio"]:checked ~ label{
+    border: 2px solid rgb(38, 38, 38);
+}
+.color4 input[type="radio"]:checked ~ label::after{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(196deg, rgb(151, 175, 195), rgb(103, 137, 167));
+    z-index: -1;
+    transition: ease;
+    opacity: 1;
+}
+.color5 input[type="radio"]:checked ~ .image5{
+    opacity: 1;
+    animation: shake-effect 250ms 100ms ease 2 alternate;
+}
+.color5 input[type="radio"]:checked ~ label{
+    border: 2px solid rgb(38, 38, 38);
+}
+.color5 input[type="radio"]:checked ~ label::after{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(196deg, rgb(175, 166, 160), rgb(140, 127, 118));
+    z-index: -1;
+    transition: ease;
+    opacity: 1;
+}
+.color6 input[type="radio"]:checked ~ .image6{
+    opacity: 1;
+    animation: shake-effect 250ms 100ms ease 2 alternate;
+}
+.color6 input[type="radio"]:checked ~ label{
+    border: 2px solid rgb(38, 38, 38);
+    /* border-radius: 5px; */
+}
+.color6 input[type="radio"]:checked ~ label::after{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(196deg, rgb(170, 173, 172), rgb(131, 135, 134));
+    z-index: -1;
+    transition: ease;
+    opacity: 1;
+}
+@keyframes shake-effect {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(3deg); }
+    50% { transform: rotate(0eg); }
+    75% { transform: rotate(-3deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+  /* ********************DESCRIPTION AND DETAIL********************* */
+
+  #rb-description, #rb-detail{
+    visibility: hidden;
+  }
+.rb2:not(:checked) ~ .details-text{
+    display: none;
+ }
+.rb2:checked ~ .details{
+    transform: translateY(0);
+    transition: all 200ms;
+}
+.rb2:not(:checked) ~ .details{
+    opacity: 0.6;
+    font-size: 1.2rem;
+ }
+.rb2:checked ~ .details{
+    opacity: 1;
+    font-size: 1.2rem;
+ }
+.rb2:not(:checked) ~ p{
+    width: 100%;
+ }
+ .rb1:not(:checked) ~ p{
+    display: none;
+ }
+ .rb1:not(:checked) ~ .description{
+    opacity: 0.6;
+    font-size: 1.2rem;
+ }
+ .rb1:checked ~ .description{
+    opacity: 1;
+    font-size: 1.2rem;
+ }
+ .rb1:not(:checked) ~ .details-text{
+    width: 100%;
+ }
+
+ /* **************************FONT STYLING************************** */
+
+ .small-heading{
+    font-weight: 700;
+ }
+ .main-heading{
+    font-size: 2.2rem;
+    font-weight: 900;
+ }
+ .sp1{
+    font-size: 1.6rem;
+    font-weight: 500;
+ }
+ .sp2{
+    font-size: 1.2rem;
+    opacity: 0.7;
+ }
+ .choose-color{
+    font-weight: 600;
+    font-size: 1.2rem;
+ }
+ .details-text{
+    gap: 1rem;
+    padding: 0.5rem;
+    line-height: 1.5rem;
+    height: 3rem;
+    margin-left: -0.5rem;
+    margin-bottom: 0.8rem;
+ }
+ .details-text > div > span{
+    font-size: 2rem;
+ }
+ .desc-details p{
+    height: 3rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+ }
